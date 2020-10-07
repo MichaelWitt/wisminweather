@@ -26,6 +26,7 @@ You can see all of my updates and pushes in the refactory, which displays code c
 ## Credits
 
 UNC Coding Bootcamp and Trilogy Education Services for the inspiration & code to create.
+https://mdbootstrap.com/ for some bootstrap layouts
 
 ## License
 
