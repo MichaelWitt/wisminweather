@@ -22,8 +22,9 @@
 
     <h1 class="px-2">Search For A City:</h1>
     <form class="form-inline d-flex justify-content-left md-form form-sm mt-0 ml-2">
-        <i class="fas fa-search" aria-hidden="true"></i>
-        <input class="form-control form-control-md ml-3 w-40" type="text" placeholder="Search" aria-label="Search">
+        <input id="searchedCity" class="searchedCity form-control form-control-md ml-3 w-40" type="text"
+            placeholder="Search" aria-label="Search">
+        <button id='search-button' class="btn btn-primary"><i class="fas fa-search" aria-hidden="true"></i></button>
     </form>
 
     <br />
@@ -43,18 +44,22 @@
 
     <div class="card ml-3" style="width: 18rem;">
         <div class="card-body">
-            <h5 class="card-title">City & Date</h5>
+            <h5 class="card-title">
+                <p id="cityName">City</p>
+                <p id="currentDate">Date</p>
+                <p>Weather icon</p>
+            </h5>
             <p class="card-text">Temperature:
-            <p class="cityTemp">89</p>
+            <p id="cityTemp"></p>
             </p>
             <p class="card-text">Humidity:
-            <p class="cityHumidity">89</p>
+            <p id="cityHumidity"></p>
             </p>
             <p class="card-text">Wind Speed:
-            <p class="cityWindspeed">89</p>
+            <p id="cityWindspeed"></p>
             </p>
             <p class="card-text">UV Index:
-            <p class="cityUvindex">89</p>
+            <p id="cityUvindex"></p>
             </p>
         </div>
     </div>
