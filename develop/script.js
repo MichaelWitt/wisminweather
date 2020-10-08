@@ -30,6 +30,8 @@ $(document).ready(function () {
 
             $('#cityTemp').text(response.main.temp)
             $('#cityName').text(response.name)
+            $('#cityHumidity').text(response.main.humidity)
+            $('#cityWindspeed').text(response.wind.speed)
             var date = new Date().toLocaleDateString()
             console.log(date)
             $('#currentDate').text(date)
