@@ -32,6 +32,7 @@ $(document).ready(function () {
             $('#cityName').text(response.name)
             $('#cityHumidity').text(response.main.humidity)
             $('#cityWindspeed').text(response.wind.speed)
+            $('#weatherIcons').attr('src', 'https://openweathermap.org/img/w/' + response.weather[0].icon + '.png')
             var date = new Date().toLocaleDateString()
             console.log(date)
             $('#currentDate').text(date)
