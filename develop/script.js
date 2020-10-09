@@ -22,19 +22,17 @@ $(document).ready(function () {
         }).then(function (response) {
             console.log('response:', response)
 
-            $('#cityTemp').text(response.main.temp)
+            $('#cityTemp').text(response.main.temp + '°')
             $('#cityName').text(response.name)
-            $('#cityHumidity').text(response.main.humidity)
-            $('#cityWindspeed').text(response.wind.speed)
+            $('#cityHumidity').text(response.main.humidity + '%')
+            $('#cityWindspeed').text(response.wind.speed + ' mph')
             $('#weatherIcons').attr('src', 'https://openweathermap.org/img/w/' + response.weather[0].icon + '.png')
             var date = new Date().toLocaleDateString()
             console.log(date)
             $('#currentDate').text(date)
 
             var latitude = response.coord.lat
-            console.log('latitude:', latitude)
             var longitude = response.coord.lon
-            console.log('longitude:', longitude)
 
 
             // Gets UV Index
@@ -46,17 +44,25 @@ $(document).ready(function () {
             }).then(function (response) {
                 console.log('response:', response)
                 $('#cityUvindex').text(response.value)
+
+
+                //5 Day Forecast
+                var queryURL5Day = 'https://api.openweathermap.org/data/2.5/forecast?q=' + cityName + '&appid=' + APIKey + '&units=imperial';
+
+                $.ajax({
+                    url: queryURL5Day,
+                    method: 'GET',
+                }).then(function (response) {
+                    console.log('response:', response)
+                    $('#5DayTemp').text(response.list[0].main.temp + '°')
+                    $('#5DayHumidity').text(response.list[0].main.humidity + '%')
+
+
+
+
+                })
             })
-
-            // var queryURL5Day = 'api.openweathermap.org/data/2.5/forecast?q=' + cityName + '&appid=' + APIKey + '&units=imperial';
-
-
-
-
-
         })
-
-
     })
 
     // $('#search-button').click(function (e) {
