@@ -38,7 +38,7 @@ $(document).ready(function () {
 
 
             // Gets UV Index
-            var queryURLUv = 'https://api.openweathermap.org/data/2.5/uvi?lat=' + latitude + '&lon=' + longitude + '&appid=' + APIKey + '&units=imperial';
+            var queryURLUv = 'https://api.openweathermap.org/data/2.5/uvi?lat=' + latitude + '&lon=' + longitude + '&appid=' + APIKey;
 
             $.ajax({
                 url: queryURLUv,
