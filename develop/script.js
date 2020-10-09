@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     var APIKey = '166a433c57516f51dfab1f7edaed8413';
 
-
+    // Today's Forecast
     $('#search-button').click(function (e) {
         e.preventDefault()
 
@@ -54,10 +54,36 @@ $(document).ready(function () {
                     method: 'GET',
                 }).then(function (response) {
                     console.log('response:', response)
-                    $('#5DayTemp').text(response.list[0].main.temp + '°')
-                    $('#5DayHumidity').text(response.list[0].main.humidity + '%')
 
+                    // var today = new Date()
+                    // var tomorrow = new Date(today)
+                    // tomorrow.setDate(tomorrow.getDate() + 1)
+                    // console.log('tomorrow:', tomorrow)
 
+                    $('#Day2Date').text(date++)
+                    $('#Day2Temp').text('Temp: ' + response.list[7].main.temp + '°')
+                    $('#Day2Humidity').text('Humidity: ' + response.list[7].main.humidity + '%')
+                    $('#Day2Icon').attr('src', 'https://openweathermap.org/img/w/' + response.list[7].weather[0].icon + '.png')
+
+                    $('#Day3Date').text(date)
+                    $('#Day3Temp').text('Temp: ' + response.list[15].main.temp + '°')
+                    $('#Day3Humidity').text('Humidity: ' + response.list[15].main.humidity + '%')
+                    $('#Day3Icon').attr('src', 'https://openweathermap.org/img/w/' + response.list[15].weather[0].icon + '.png')
+
+                    $('#Day4Date').text(date)
+                    $('#Day4Temp').text('Temp: ' + response.list[23].main.temp + '°')
+                    $('#Day4Humidity').text('Humidity: ' + response.list[23].main.humidity + '%')
+                    $('#Day4Icon').attr('src', 'https://openweathermap.org/img/w/' + response.list[23].weather[0].icon + '.png')
+
+                    $('#Day5Date').text(date)
+                    $('#Day5Temp').text('Temp: ' + response.list[31].main.temp + '°')
+                    $('#Day5Humidity').text('Humidity: ' + response.list[31].main.humidity + '%')
+                    $('#Day5Icon').attr('src', 'https://openweathermap.org/img/w/' + response.list[31].weather[0].icon + '.png')
+
+                    $('#Day6Date').text(date)
+                    $('#Day6Temp').text('Temp: ' + response.list[39].main.temp + '°')
+                    $('#Day6Humidity').text('Humidity: ' + response.list[39].main.humidity + '%')
+                    $('#Day6Icon').attr('src', 'https://openweathermap.org/img/w/' + response.list[39].weather[0].icon + '.png')
 
 
                 })
@@ -65,31 +91,11 @@ $(document).ready(function () {
         })
     })
 
-    // $('#search-button').click(function (e) {
-    //     e.preventDefault()
-
-    //     var queryURLUv = 'https://api.openweathermap.org/data/2.5/uvi?appid=' + APIKey + '&lat=' + latitude + '&lon=' + longitude;
-    //     // 'http://api.openweathermap.org/data/2.5/uvi?lat=' + latitude + '&lon=' + longitude + '&appid=' + APIKey + '&units=imperial';
-
-    //     $.ajax({
-    //         url: queryURLUv,
-    //         method: 'GET',
-    //     }).then(function (response) {
-    //         console.log('response:', response)
-    //         $('#cityUvindex').text(response.value)
-
-
-    //     })
-    // })
 
 
 
 
-    // we need to get UV index
-    // getUvIndex(cityName);
-    // getFivedayForecast(cityName);
 
-    // make a functino to get the 5 day forecast
 
     // make a function to read local storage
     // if there are cities saved, make them into buttons
