@@ -14,8 +14,9 @@
 
 <body>
 
-    <nav class="navbar navbar-light bg-light">
-        <span class="topHeader navbar-brand mb-0 h1">Wismin Weather</span>
+
+    <nav class="navbar navbar-light">
+        <span class="navbar-brand mb-0 h1 topHeader">Wismin Weather</span>
     </nav>
 
     <br />
@@ -29,81 +30,91 @@
 
     <br />
 
-    <ul class="list-group ml-2">
-        <li class="list-group-item ml-2 col-md-3 btn btn-primary">Wilmington</li>
-    </ul>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <ul class="list-group ml-2">
+                    <li class="list-group-item btn btn-primary stored-cities">City</li>
+                </ul>
+            </div>
 
-    <br />
+            <br />
 
-    <div class="card ml-3" style="width: 18rem;">
-        <div class="card-body">
-            <h5 class="card-title">
-                <p id="cityName">City</p>
-                <p id="currentDate">Date</p>
-                <p id="iconInput"><img id="weatherIcons" src="" alt="weather icon"></img></p>
-            </h5>
-            <p class="card-text">Temperature:
-            <p id="cityTemp"></p>
-            </p>
-            <p class="card-text">Humidity:
-            <p id="cityHumidity"></p>
-            </p>
-            <p class="card-text">Wind Speed:
-            <p id="cityWindspeed"></p>
-            </p>
-            <p class="card-text">UV Index:
-            <p id="cityUvindex"></p>
-            </p>
+            <div class="col-md-5 day-forecast">
+                <div class="card ml-2" style="width: 29rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <p id="cityName">City</p>
+                            <p id="currentDate">Date</p>
+                            <p id="iconInput"><img id="weatherIcons" src=""></img></p>
+                        </h5>
+                        <p class="card-text">Temperature:
+                        <p id="cityTemp"></p>
+                        </p>
+                        <p class="card-text">Humidity:
+                        <p id="cityHumidity"></p>
+                        </p>
+                        <p class="card-text">Wind Speed:
+                        <p id="cityWindspeed"></p>
+                        </p>
+                        <p class="card-text">UV Index:
+                        <p id="cityUvindex"></p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="five-day">
+                    <h3 class="px-2 ml-3">5 Day Forecast</h3>
+                    <ul class="list-group ml-2 mb-2">
+                        <li class="list-group-item ml-2 active">
+                            <p id="Day2Date"></p>
+                            <p><img id="Day2Icon" src=""></img></p>
+                            <p id="Day2Temp"></p>
+                            <p id="Day2Humidity"></p>
+                        </li>
+                    </ul>
+
+                    <ul class="list-group ml-2 mb-2">
+                        <li class="list-group-item ml-2 active">
+                            <p id="Day3Date"></p>
+                            <p><img id="Day3Icon" src=""></img></p>
+                            <p id="Day3Temp"></p>
+                            <p id="Day3Humidity"></p>
+                        </li>
+                    </ul>
+
+                    <ul class="list-group ml-2 mb-2">
+                        <li class="list-group-item ml-2 active">
+                            <p id="Day4Date"></p>
+                            <p><img id="Day4Icon" src=""></img></p>
+                            <p id="Day4Temp"></p>
+                            <p id="Day4Humidity"></p>
+                        </li>
+                    </ul>
+
+                    <ul class="list-group ml-2 mb-2">
+                        <li class="list-group-item ml-2 active">
+                            <p id="Day5Date"></p>
+                            <p><img id="Day5Icon" src="" </img></p>
+                            <p id="Day5Temp"></p>
+                            <p id="Day5Humidity"></p>
+                        </li>
+                    </ul>
+
+                    <ul class="list-group ml-2 mb-2">
+                        <li class="list-group-item ml-2 active">
+                            <p id="Day6Date"></p>
+                            <p><img id="Day6Icon" src=""></img></p>
+                            <p id="Day6Temp"></p>
+                            <p id="Day6Humidity"></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
-
-    <br />
-
-    <h3 class="px-2 ml-3">5 Day Forecast</h3>
-    <ul class="list-group ml-2 mb-2">
-        <li class="list-group-item ml-2 col-md-3 active">
-            <p id="Day2Date"></p>
-            <p><img id="Day2Icon" src="" alt="weather icons"></img></p>
-            <p id="Day2Temp"></p>
-            <p id="Day2Humidity"></p>
-        </li>
-    </ul>
-
-    <ul class="list-group ml-2 mb-2">
-        <li class="list-group-item ml-2 col-md-3 active">
-            <p id="Day3Date"></p>
-            <p><img id="Day3Icon" src="" alt="weather icons"></img></p>
-            <p id="Day3Temp"></p>
-            <p id="Day3Humidity"></p>
-        </li>
-    </ul>
-
-    <ul class="list-group ml-2 mb-2">
-        <li class="list-group-item ml-2 col-md-3 active">
-            <p id="Day4Date"></p>
-            <p><img id="Day4Icon" src="" alt="weather icons"></img></p>
-            <p id="Day4Temp"></p>
-            <p id="Day4Humidity"></p>
-        </li>
-    </ul>
-
-    <ul class="list-group ml-2 mb-2">
-        <li class="list-group-item ml-2 col-md-3 active">
-            <p id="Day5Date"></p>
-            <p><img id="Day5Icon" src="" alt="weather icons"></img></p>
-            <p id="Day5Temp"></p>
-            <p id="Day5Humidity"></p>
-        </li>
-    </ul>
-
-    <ul class="list-group ml-2 mb-2">
-        <li class="list-group-item ml-2 col-md-3 active">
-            <p id="Day6Date"></p>
-            <p><img id="Day6Icon" src="" alt="weather icons"></img></p>
-            <p id="Day6Temp"></p>
-            <p id="Day6Humidity"></p>
-        </li>
-    </ul>
 
     <br />
 
