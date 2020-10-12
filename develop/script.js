@@ -50,6 +50,16 @@ $(document).ready(function () {
                 console.log('response:', response)
                 $('#cityUvindex').text(response.value)
 
+                var uvButton = response.value;
+
+                if (uvButton < 2) {
+                    $('#cityUvindex').addClass('fair')
+                }
+
+                if (uvButton > 6) {
+                    $('#cityUvindex').addClass('severe')
+                }
+
 
                 //5 Day Forecast
                 var queryURL5Day = 'https://api.openweathermap.org/data/2.5/forecast?q=' + cityName + '&appid=' + APIKey + '&units=imperial';
