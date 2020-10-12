@@ -3,6 +3,11 @@ $(document).ready(function () {
     // call readLocalStorage() 
 
 
+    $("#search-button").click(function () {
+        $("#container-display").toggle();
+    });
+
+
     var APIKey = '166a433c57516f51dfab1f7edaed8413';
 
     // Today's Forecast

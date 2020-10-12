@@ -9,11 +9,9 @@ body {
 .topHeader {
 font-size: 40px;
 margin: auto;
-color: #74D5DD;
 }
 
-/* .stored-cities {
-    width: 20px;
-} */
-
+.container {
+display:none;
+}
 
