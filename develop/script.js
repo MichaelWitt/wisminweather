@@ -2,9 +2,20 @@ $(document).ready(function () {
 
     // call readLocalStorage() 
 
+//  onpage load read local storage
+// loop over cities in local storage array
+// empty div first 
+// build button for each one
+// append buttons to page
+// 
+
+
+
+
+
 
     $("#search-button").click(function () {
-        $("#container-display").toggle();
+        $("#container-display").removeClass('d-none');
     });
 
 
@@ -13,6 +24,13 @@ $(document).ready(function () {
     // Today's Forecast
     $('#search-button').click(function (e) {
         e.preventDefault()
+
+// read local storage
+// save as array of cities
+// add new city to array
+// set local storage
+// call build button function
+
 
         var cityName = $('#searchedCity').val();
         console.log(cityName)
@@ -27,10 +45,10 @@ $(document).ready(function () {
         }).then(function (response) {
             console.log('response:', response)
 
-            $('#cityTemp').text(response.main.temp + '°')
+            $('#cityTemp').text('Temperature: ' + response.main.temp + '°')
             $('#cityName').text(response.name)
-            $('#cityHumidity').text(response.main.humidity + '%')
-            $('#cityWindspeed').text(response.wind.speed + ' mph')
+            $('#cityHumidity').text('Humidity: ' + response.main.humidity + '%')
+            $('#cityWindspeed').text('Wind Speed: ' + response.wind.speed + ' mph')
             $('#weatherIcons').attr('src', 'https://openweathermap.org/img/w/' + response.weather[0].icon + '.png')
             var date = new Date().toLocaleDateString()
             console.log(date)

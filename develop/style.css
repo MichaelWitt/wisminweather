@@ -10,8 +10,8 @@ font-size: 40px;
 margin: auto;
 }
 
-.container {
-display:none;
+.d-none {
+    display:none;
 }
 
 .fair {
@@ -20,4 +20,9 @@ background-color: green;
 
 .severe {
 background-color: red;
+}
+
+.five-day p{
+margin-bottom: 0px;
+padding: 0px;
 }
