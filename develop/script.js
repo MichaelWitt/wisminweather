@@ -1,15 +1,52 @@
 $(document).ready(function () {
 
-    // call readLocalStorage() 
-
-//  onpage load read local storage
-// loop over cities in local storage array
-// empty div first 
-// build button for each one
-// append buttons to page
-// 
 
 
+    // //  onpage load read local storage
+    // readLocalStorage()
+    // // loop over cities in local storage array
+    // for (let i = 0; i < citiesSearched.length; i++) {
+    // }
+    // // empty div first 
+    // $('#stored-city-display').empty()
+    // // build button for each one
+    // $('#stored-city-display').append(cityName)
+    // // append buttons to page
+
+    // var citiesSearched = $(this).siblings('.stored-cities').val();;
+    // console.log('citiesSearched:', citiesSearched)
+
+    // localStorage.setItem('city-list', JSON.stringify(citiesSearched))
+
+    // JSON.parse(localStorage.getItem('city-list'))
+
+    /*
+  var citiesSearched = $(this).siblings('.stored-cities').val();;
+    console.log('citiesSearched:', citiesSearched)
+
+    localStorage.setItem('city-list', JSON.stringify(citiesSearched))
+
+    JSON.parse(localStorage.getItem('city-list'))
+
+
+       $('.saveBtn').on('click', function () {
+            var value = $(this).siblings('.description').val();
+            var time = $(this).parent().attr('id');
+            localStorage.setItem(time, value);
+        });
+    
+        $('#9 .description').val(localStorage.getItem('9'));
+        $('#10 .description').val(localStorage.getItem('10'));
+        $('#11 .description').val(localStorage.getItem('11'));
+        $('#12 .description').val(localStorage.getItem('12'));
+        $('#13 .description').val(localStorage.getItem('13'));
+        $('#14 .description').val(localStorage.getItem('14'));
+        $('#15 .description').val(localStorage.getItem('15'));
+        $('#16 .description').val(localStorage.getItem('16'));
+        $('#17 .description').val(localStorage.getItem('17'));
+    
+    });
+    */
 
 
 
@@ -25,11 +62,18 @@ $(document).ready(function () {
     $('#search-button').click(function (e) {
         e.preventDefault()
 
-// read local storage
-// save as array of cities
-// add new city to array
-// set local storage
-// call build button function
+        // localStorage.setItem(city, i);
+
+        // read local storage
+
+        // save as array of cities
+
+        // add new city to array
+
+        // set local storage
+
+        // call build button function
+
 
 
         var cityName = $('#searchedCity').val();
@@ -134,18 +178,6 @@ $(document).ready(function () {
 
 
 
-
-
-
-
-    // make a function to read local storage
-    // if there are cities saved, make them into buttons
-    // append them to the page 
-
-    // make another function to write to local storage
-    // when a city is searched, 
-    // add that city to the local storage array of cities 
-    // check if it already exists, if it does, don't add it
 
 
 

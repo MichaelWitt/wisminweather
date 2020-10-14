@@ -26,9 +26,9 @@
             <div class="col">
 
                 <h1 class="px-2">Search For A City:</h1>
-                <form class="form-inline d-flex justify-content-left md-form form-sm mt-0 ml-2">
-                    <input id="searchedCity" class="searchedCity form-control form-control-md ml-3 w-40" type="text"
-                        placeholder="Search" aria-label="Search">
+                <form class="form-inline d-flex justify-content-left md-form form-sm mt-0">
+                    <input id="searchedCity" class="searchedCity form-control form-control-md ml-2 w-40 stored-cities"
+                        type="text" placeholder="Search" aria-label="Search">
                     <button id='search-button' class="btn btn-primary"><i class="fas fa-search"
                             aria-hidden="true"></i></button>
                 </form>
@@ -50,21 +50,21 @@
                 <div class="card ml-2">
                     <div class="card-body">
                         <h5 class="card-title">
-                            <p id="cityName">City</p>
-                            <p id="currentDate">Date</p>
-                            <p id="iconInput"><img id="weatherIcons" src=""></img></p>
+                            <p id="cityName" class="stored-cities">City</p>
+                            <p id="currentDate" class="stored-cities">Date</p>
+                            <p id="iconInput" class="stored-cities"><img id="weatherIcons" src=""></img></p>
                         </h5>
                         <p class="card-text">
-                        <p id="cityTemp"></p>
+                        <p id="cityTemp" class="stored-cities"></p>
                         </p>
                         <p class="card-text">
-                        <p id="cityHumidity"></p>
+                        <p id="cityHumidity" class="stored-cities"></p>
                         </p>
                         <p class="card-text">
-                        <p id="cityWindspeed"></p>
+                        <p id="cityWindspeed" class="stored-cities"></p>
                         </p>
                         <p class="card-text">UV Index:
-                        <p id="cityUvindex" class="btn btn-primary uv-class"></p>
+                        <p id="cityUvindex" class="btn btn-primary uv-class stored-cities"></p>
                         </p>
                     </div>
                 </div>
@@ -81,50 +81,50 @@
                         <div class="col-4 mb-1">
                             <ul class="list-group ml-2 mb-2 h-100">
                                 <li class="list-group-item ml-2 active h-100 mb-2">
-                                    <p id="Day2Date"></p>
-                                    <p><img id="Day2Icon" src=""></img></p>
-                                    <p id="Day2Temp"></p>
-                                    <p id="Day2Humidity"></p>
+                                    <p id="Day2Date" class="stored-cities"></p>
+                                    <p><img id="Day2Icon" class="stored-cities" src=""></img></p>
+                                    <p id="Day2Temp" class="stored-cities"></p>
+                                    <p id="Day2Humidity" class="stored-cities"></p>
                                 </li>
                             </ul>
                         </div>
                         <div class="col-4 mb-1">
                             <ul class="list-group ml-2 mb-2 h-100">
                                 <li class="list-group-item ml-2 active h-100 mb-2">
-                                    <p id="Day3Date"></p>
-                                    <p><img id="Day3Icon" src=""></img></p>
-                                    <p id="Day3Temp"></p>
-                                    <p id="Day3Humidity"></p>
+                                    <p id="Day3Date" class="stored-cities"></p>
+                                    <p><img id="Day3Icon" class="stored-cities" src=""></img></p>
+                                    <p id="Day3Temp" class="stored-cities"></p>
+                                    <p id="Day3Humidity" class="stored-cities"></p>
                                 </li>
                             </ul>
                         </div>
                         <div class="col-4 mb-1">
                             <ul class="list-group ml-2 mb-2 h-100">
                                 <li class="list-group-item ml-2 active h-100 mb-2">
-                                    <p id="Day4Date"></p>
-                                    <p><img id="Day4Icon" src=""></img></p>
-                                    <p id="Day4Temp"></p>
-                                    <p id="Day4Humidity"></p>
+                                    <p id="Day4Date" class="stored-cities"></p>
+                                    <p><img id="Day4Icon" class="stored-cities" src=""></img></p>
+                                    <p id="Day4Temp" class="stored-cities"></p>
+                                    <p id="Day4Humidity" class="stored-cities"></p>
                                 </li>
                             </ul>
                         </div>
                         <div class="col-4 mb-1">
                             <ul class="list-group ml-2 mb-2 h-100">
                                 <li class="list-group-item ml-2 active h-100 mb-2">
-                                    <p id="Day5Date"></p>
-                                    <p><img id="Day5Icon" src=""></img></p>
-                                    <p id="Day5Temp"></p>
-                                    <p id="Day5Humidity"></p>
+                                    <p id="Day5Date" class="stored-cities"></p>
+                                    <p><img id="Day5Icon" class="stored-cities" src=""></img></p>
+                                    <p id="Day5Temp" class="stored-cities"></p>
+                                    <p id="Day5Humidity" class="stored-cities"></p>
                                 </li>
                             </ul>
                         </div>
                         <div class="col-4 mb-1">
                             <ul class="list-group ml-2 mb-2 h-100">
                                 <li class="list-group-item ml-2 active h-100 mb-2">
-                                    <p id="Day6Date"></p>
-                                    <p><img id="Day6Icon" src=""></img></p>
-                                    <p id="Day6Temp"></p>
-                                    <p id="Day6Humidity"></p>
+                                    <p id="Day6Date" class="stored-cities"></p>
+                                    <p><img id="Day6Icon" class="stored-cities" src=""></img></p>
+                                    <p id="Day6Temp" class="stored-cities"></p>
+                                    <p id="Day6Humidity" class="stored-cities"></p>
                                 </li>
                             </ul>
                         </div>
