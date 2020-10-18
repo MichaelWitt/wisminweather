@@ -33,7 +33,7 @@ Thank you!
 
 Licensed under the MIT license.
 
-https://michaelwitt.github.io/wisminweather/assets/LICENSE.txt
+https://michaelwitt.github.io/wisminweather/LICENSE.txt
 
 ## Contributor Covenant Code of Conduct
 
