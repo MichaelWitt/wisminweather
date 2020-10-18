@@ -2,92 +2,53 @@ $(document).ready(function () {
 
 
 
-    // //  onpage load read local storage
-    // readLocalStorage()
-    // // loop over cities in local storage array
-    // for (let i = 0; i < citiesSearched.length; i++) {
-    // }
-    // // empty div first 
-    // $('#stored-city-display').empty()
-    // // build button for each one
-    // $('#stored-city-display').append(cityName)
-    // // append buttons to page
-
-    // var citiesSearched = $(this).siblings('.stored-cities').val();;
-    // console.log('citiesSearched:', citiesSearched)
-
-    // localStorage.setItem('city-list', JSON.stringify(citiesSearched))
-
-    // JSON.parse(localStorage.getItem('city-list'))
-
-    /*
-  var citiesSearched = $(this).siblings('.stored-cities').val();;
-    console.log('citiesSearched:', citiesSearched)
-
-    localStorage.setItem('city-list', JSON.stringify(citiesSearched))
-
-    JSON.parse(localStorage.getItem('city-list'))
-
-
-       $('.saveBtn').on('click', function () {
-            var value = $(this).siblings('.description').val();
-            var time = $(this).parent().attr('id');
-            localStorage.setItem(time, value);
-        });
-    
-        $('#9 .description').val(localStorage.getItem('9'));
-        $('#10 .description').val(localStorage.getItem('10'));
-        $('#11 .description').val(localStorage.getItem('11'));
-        $('#12 .description').val(localStorage.getItem('12'));
-        $('#13 .description').val(localStorage.getItem('13'));
-        $('#14 .description').val(localStorage.getItem('14'));
-        $('#15 .description').val(localStorage.getItem('15'));
-        $('#16 .description').val(localStorage.getItem('16'));
-        $('#17 .description').val(localStorage.getItem('17'));
-    
-    });
-    */
 
 
 
+
+    // Hides container until search button clicked
 
     $("#search-button").click(function () {
         $("#container-display").removeClass('d-none');
     });
 
 
+
     var APIKey = '166a433c57516f51dfab1f7edaed8413';
 
-    // Today's Forecast
+    // Weather Forecast
+
     $('#search-button').click(function (e) {
         e.preventDefault()
 
-        // localStorage.setItem(city, i);
-
-        // read local storage
-
-        // save as array of cities
-
-        // add new city to array
-
-        // set local storage
-
-        // call build button function
-
+        // function makeRow(text) {
+        //     var li = $("<li>").addClass("list-group-item list-group-item-action").text(text);
+        //     $(".history").append(li);
+        // }
 
 
         var cityName = $('#searchedCity').val();
-        console.log(cityName)
+
+        // Links Weather API to Website
 
         var queryURL =
             'https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' +
             APIKey + '&units=imperial';
 
+        // function weatherResults(cityName) {
         $.ajax({
             url: queryURL,
             method: 'GET',
         }).then(function (response) {
-            console.log('response:', response)
+
+
+            // if (history.indexOf(cityName) === -1) {
+            //     history.push(cityName);
+            //     window.localStorage.setItem("history", JSON.stringify(history));
+
+            //     makeRow(cityName);
+            // }
+
 
             $('#cityTemp').text('Temperature: ' + response.main.temp + '°')
             $('#cityName').text(response.name)
@@ -175,10 +136,18 @@ $(document).ready(function () {
             })
         })
     })
+    // })
 
 
+    // var history = JSON.parse(window.localStorage.getItem("history")) || [];
 
+    // if (history.length > 0) {
+    //     weatherResults(history[history.length - 1]);
+    // }
 
+    // for (var i = 0; i < history.length; i++) {
+    //     makeRow(history[i]);
+    // }
 
 
 });
