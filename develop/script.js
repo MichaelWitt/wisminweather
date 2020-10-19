@@ -2,10 +2,6 @@ $(document).ready(function () {
 
 
 
-
-
-
-
     // Hides container until search button clicked
 
     $("#search-button").click(function () {
@@ -13,23 +9,23 @@ $(document).ready(function () {
     });
 
 
-
-    var APIKey = '166a433c57516f51dfab1f7edaed8413';
-
     // Weather Forecast
 
     $('#search-button').click(function (e) {
         e.preventDefault()
 
-        // function makeRow(text) {
-        //     var li = $("<li>").addClass("list-group-item list-group-item-action").text(text);
-        //     $(".history").append(li);
-        // }
-
-
         var cityName = $('#searchedCity').val();
 
+        String.prototype.capitalize = function () {
+            return this.charAt(0).toUpperCase() + this.slice(1);
+        }
+
+        $("#cityListings").append(`<li><button class="btn btn-primary btn-lg stored-cities mb-1">${cityName.capitalize()}</button></li>`)
+
+
         // Links Weather API to Website
+
+        var APIKey = '166a433c57516f51dfab1f7edaed8413';
 
         var queryURL =
             'https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' +
@@ -40,7 +36,21 @@ $(document).ready(function () {
             url: queryURL,
             method: 'GET',
         }).then(function (response) {
+            var cityHistory = localStorage.getItem('cityHistory')
+            // if (cityHistory) {
+            //     var newArr = cityHistory
+            //     newArr.push(JSON.stringify(response))
+            // } else {
+            //     window.localStorage.setItem('cityHistory', [JSON.stringify(response)])
+            // }
 
+
+
+            // console.log('localStorage:', localStorage)
+            // var localItem = localStorage.getItem('cityHistory')
+            // console.log(localItem)
+
+            // localStorage.clear()
 
             // if (history.indexOf(cityName) === -1) {
             //     history.push(cityName);
