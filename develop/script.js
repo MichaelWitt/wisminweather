@@ -44,8 +44,6 @@ $(document).ready(function () {
             //     window.localStorage.setItem('cityHistory', [JSON.stringify(response)])
             // }
 
-
-
             // console.log('localStorage:', localStorage)
             // var localItem = localStorage.getItem('cityHistory')
             // console.log(localItem)
@@ -74,6 +72,7 @@ $(document).ready(function () {
 
 
             // Gets UV Index
+
             var queryURLUv = 'https://api.openweathermap.org/data/2.5/uvi?lat=' + latitude + '&lon=' + longitude + '&appid=' + APIKey;
 
             $.ajax({
@@ -94,7 +93,8 @@ $(document).ready(function () {
                 }
 
 
-                //5 Day Forecast
+                // 5 Day Forecast
+
                 var queryURL5Day = 'https://api.openweathermap.org/data/2.5/forecast?q=' + cityName + '&appid=' + APIKey + '&units=imperial';
 
                 $.ajax({
