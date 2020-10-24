@@ -1,9 +1,18 @@
 $(document).ready(function () {
 
+    // render historical cities buttons
+
 
     // Retrieve
     var history = JSON.parse(window.localStorage.getItem("history")) || [];
 
+    history.map(city => {
+        console.log('test')
+        console.log($("#cityListings"))
+        let item = $('<li>').text(city)
+        $("#cityListings").append(item)
+    })
+    console.log(history)
 
     // Hides container until search button clicked
 
@@ -15,15 +24,29 @@ $(document).ready(function () {
     // Weather Forecast
     function getWeather(cityName) {
 
+        if (history.indexOf(cityName) === -1) {
+
+            history.push(cityName);
+            window.localStorage.setItem("history", JSON.stringify(history))
+            $("#cityListings").append(`<li><button class="city-click btn btn-primary btn-lg stored-cities mb-1">${cityName.capitalize()}</button></li>`)
+        }
+
+
+
         String.prototype.capitalize = function () {
             return this.charAt(0).toUpperCase() + this.slice(1);
         }
 
-        if (history.indexOf(cityName.capitalize()) === -1) {
-            history.push(cityName.capitalize());
-            window.localStorage.setItem("history", JSON.stringify(history));
-            $("#cityListings").append(`<li><button class="city-click btn btn-primary btn-lg stored-cities mb-1">${cityName.capitalize()}</button></li>`);
-        }
+
+
+
+        // function makeRow() {
+        // }
+
+        // function makeRow(text) {
+        //     var li = $("<li>").addClass("list-group-item list-group-item-action").text(text);
+        //     $(".history").append(li);
+        // }
 
 
         // Links Weather API to Website
@@ -34,11 +57,35 @@ $(document).ready(function () {
             'https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' +
             APIKey + '&units=imperial';
 
-
+        // function searchWeather(cityName) {
         $.ajax({
             url: queryURL,
             method: 'GET',
         }).then(function (response) {
+            console.log(response)
+
+            // var cityHistory = localStorage.getItem('cityHistory')
+            // if (cityHistory) {
+            //     var newArr = cityHistory
+            //     newArr.push(JSON.stringify(response))
+            // } else {
+            //     window.localStorage.setItem('cityHistory', [JSON.stringify(response)])
+            // }
+
+            // console.log('localStorage:', localStorage)
+            // var localItem = localStorage.getItem('cityHistory')
+            // console.log(localItem)
+
+
+
+
+            // if (history.indexOf(cityName) === -1) {
+            //     history.push(cityName);
+            //     window.localStorage.setItem("history", JSON.stringify(history));
+
+            //     makeRow(cityName);
+            // }
+
 
 
             $('#cityTemp').text('Temperature: ' + response.main.temp + '°')
@@ -46,9 +93,10 @@ $(document).ready(function () {
             $('#cityHumidity').text('Humidity: ' + response.main.humidity + '%')
             $('#cityWindspeed').text('Wind Speed: ' + response.wind.speed + ' mph')
             $('#weatherIcons').attr('src', 'https://openweathermap.org/img/w/' + response.weather[0].icon + '.png')
-
             var date = new Date().toLocaleDateString()
+            console.log(date)
             $('#currentDate').text(date)
+
             var latitude = response.coord.lat
             var longitude = response.coord.lon
 
@@ -61,6 +109,7 @@ $(document).ready(function () {
                 url: queryURLUv,
                 method: 'GET',
             }).then(function (response) {
+                console.log('response:', response)
                 $('#cityUvindex').text(response.value)
 
                 var uvButton = response.value;
@@ -82,6 +131,7 @@ $(document).ready(function () {
                     url: queryURL5Day,
                     method: 'GET',
                 }).then(function (response) {
+                    console.log('response:', response)
 
                     var today = new Date()
                     var day2 = new Date(today)
@@ -139,5 +189,19 @@ $(document).ready(function () {
         getWeather(cityName)
     })
 
+    // function searchWeather(cityName)
+
+
+    // var history = JSON.parse(window.localStorage.getItem("history")) || [];
+
+    // if (history.length > 0) {
+    //     searchWeather(history[history.length - 1]);
+
+    // }
+
+    // for (var i = 0; i < history.length; i++) {
+    //     makeRow(history[i]);
+
+    // }
 
 });
