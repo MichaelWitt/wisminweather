@@ -29,16 +29,6 @@ Kenrick Mills @kenrickmills from Unsplash.com for the background photo.
 
 Thank you! 
 
-## License
-
-Licensed under the MIT license.
-
-https://michaelwitt.github.io/wisminweather/LICENSE.txt
-
-## Contributor Covenant Code of Conduct
-
-https://www.contributor-covenant.org/version/2/0/code_of_conduct/
-
 ## Thanks For Visiting!
 
 Come back soon :)
