@@ -1,11 +1,11 @@
 $(document).ready(function () {
 
 
-    // Retrieve
+    // Retrieves Searched Cities
     var history = JSON.parse(window.localStorage.getItem("history")) || [];
 
 
-    // Hides container until search button clicked
+    // Hides Container
 
     $("#search-button").click(function () {
         $("#container-display").removeClass('d-none');
@@ -24,7 +24,7 @@ $(document).ready(function () {
             window.localStorage.setItem("history", JSON.stringify(history));
             $("#cityListings").append(`<li><button class="city-click btn btn-primary btn-lg stored-cities mb-1">${cityName.capitalize()}</button></li>`);
         }
-
+        localStorage.clear()
 
         // Links Weather API to Website
 
@@ -121,19 +121,18 @@ $(document).ready(function () {
                     $('#Day6Humidity').text('Humidity: ' + response.list[39].main.humidity + '%')
                     $('#Day6Icon').attr('src', 'https://openweathermap.org/img/w/' + response.list[39].weather[0].icon + '.png')
 
-
                 })
             })
         })
     }
 
-    // listen for city button clicks
+    // Listens For Button Click
     $(document).on('click', '.city-click', function () {
         var city = $(this).text()
         getWeather(city);
     })
 
-    // listen for search button click
+    // Listens For Search Button Click
     $('#search-button').click(function () {
         var cityName = $('#searchedCity').val();
         getWeather(cityName)

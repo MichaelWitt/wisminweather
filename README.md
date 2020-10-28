@@ -6,7 +6,7 @@ _Wismin Weather._
 
 Wismin Weather is a website and application that lets you search and find city weather results instantaneously! 
 
-Upon entering your desired city, you will be given the temperature, date, humidity, wind speed, UV index, weather icon, and a 5 Day Forecast. This application was built using the Open Weather API, dynamically updated with JavaScript and jQuery, and was stylized and formatted using Bootstrap, CSS, & HTML. The data was collected using 3 ajax requests, written to the HTML using jQuery, and then written to Local Storage so that recently searched cities can be found with ease. I hope that you love and make good use of Wismin Weather! 
+Upon entering your desired city, you will be given the temperature, date, humidity, wind speed, UV index, weather icon, and a 5 Day Forecast. This application was built using the Open Weather API, dynamically updated with JavaScript and jQuery, and was stylized and formatted using Bootstrap, CSS, & HTML. The data was collected using 3 ajax requests, written to the HTML using jQuery, and then saved in buttons so that recently searched cities can be found with ease. I hope that you love and make good use of Wismin Weather! 
 
 Thanks for stopping in! I look forward to working together to make the present and future a better place. 
 
@@ -28,16 +28,6 @@ UNC Coding Bootcamp and Trilogy Education Services for the inspiration & code to
 Kenrick Mills @kenrickmills from Unsplash.com for the background photo. 
 
 Thank you! 
-
-## License
-
-Licensed under the MIT license.
-
-https://michaelwitt.github.io/wisminweather/LICENSE.txt
-
-## Contributor Covenant Code of Conduct
-
-https://www.contributor-covenant.org/version/2/0/code_of_conduct/
 
 ## Thanks For Visiting!
 
